@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="">
+
+        <label for="Time">Qual seu time?</label>
+        <select name="Time" id="Time"> 
+            <option value="Palmeiras"> Palmeiras</option>
+            <option value="Corinthians"> Corinthians</option>
+            <option value="Santos"> Santos</option>
+            <option value="São Paulo"> São Paulo</option>
+        </select> <br>
+        <label for="imagem">Coloque a imagem do seu time</label>
+        <input  type="file" value="Time">
+        <hr>
+
+        <label for="">Por que você torce para ele?</label> <br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <fieldset>
+            <legend>Fale sobre você:</legend>
+            <label for="Nome">Nome:</label>
+            <input type="text" id="Nome" name="Nome"><br><br>
+            <label for="lname">Sobrenome:</label>
+            <input type="text" id="Sobrenome" name="Sobrenome"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" ><br><br>
+            <label for="aniversario">Aniversário:</label>
+            <input type="date" id="aniversario" name="aniversario"><br><br>
+           
+           
+           <label for="Carro">Seu carro favorito:</label>
+           <input list="Carros" name="Carro" id="Carro">
+           <datalist id="Carros">
+             <option value="Gol quadrado">
+             <option value="Gol bolinha">
+             <option value="Fusca">
+             <option value="Kadett">
+             <option value="Uno">
+           </datalist> <br>
+
+           <input type="submit" value="Enviar">
+
+        </fieldset>
+
+           
+    </form>
+    
+</body>
+</html>
