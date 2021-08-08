@@ -412,7 +412,7 @@ main #home{
 }
 
 #projetos{
-    background: white;
+    background: transparent;
 }
 
 #projetos .container{
@@ -426,6 +426,12 @@ main #home{
     margin-bottom: 0;
 }
 
+@media (max-width: 360px)
+{
+  #projetos .title-2{
+    font-size: 1.8rem;
+   }
+}
 #projetos .card{
  height: 34rem;
  border-radius: 1.3125rem;
