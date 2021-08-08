@@ -428,7 +428,7 @@ main #home{
 
 @media (max-width: 360px)
 {
-  #projetos .swipe-slide .title-2{
+  #projetos .swiper-slide .title-2{
     font-size: 1.8rem;
    }
 }
