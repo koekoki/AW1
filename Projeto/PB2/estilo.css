@@ -129,6 +129,10 @@ main{
         width: 100%;
     }
     
+    nav ul{
+        padding-left: 2rem;
+        height: 15rem;
+    }
     
     nav ul li{
         text-align: left;
@@ -161,7 +165,6 @@ main{
     }
     
     nav .menu{
-        visibility: hidden;
         transition: 0.4s;
         left: 30rem;
     }
@@ -170,14 +173,9 @@ main{
         display: none;
     }
 
-    .content{
-        padding-left: 2rem;
-    }
-
     /* Menu sanduich show*/
     nav.show .menu{
-        visibility: visible;
-        
+     
         background: var(--body-color);
         height: 100vh;
         width: 100vw;
@@ -191,12 +189,23 @@ main{
         z-index: 99;
         display: grid;
     }
+
+    nav hr{
+        width: 50%;
+    }
+
+    nav i{
+        font-size: 2rem;
+        margin: 0 0.5rem;
+        color: var(--title-color);
+    }
     
 
     nav div .form{
         width: 100%;
-        clip-path: polygon(100% 19%, 100% 100%, 0 100%, 0 65%);
+        clip-path: polygon(0 45%, 100% 0%, 100% 100%, 0% 100%);
         background:linear-gradient(var(--base-color-second), var(--base-color-alt));
+        padding-bottom: 2rem;
     }
         
     nav.show .menu ul{
