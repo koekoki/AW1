@@ -19,13 +19,30 @@ window.addEventListener('scroll', function(){
     animeScroll();
 })
 
+$(".icon-menu").click(function(){
+  document.getElementById("quadrado").style.opacity = "1";
+  document.getElementById("minhaLogo").src = "assets/fotos/LogoMinhaWhite.png";
+})
+
+$(".icon-x, #fechar").click(function(){
+  document.getElementById("quadrado").style.opacity = "0";
+  document.getElementById("minhaLogo").src = "assets/fotos/LogoMinha.png";
+})
 
 
-    $( ".circulo" ).hover( function(){
-        $(".circulo3, .circulo4, .circulo2").addClass(' hover');
+
+
+    $( "#home .circulo" ).hover( function(){
+        $(".circulo4, .circulo2, .circulo5, .circulo7").addClass(' hover');
     }, function(){
-        $(".circulo3, .circulo4, .circulo2").removeClass(' hover');
+        $(".circulo4, .circulo2, .circulo5, .circulo7").removeClass(' hover');
     })
+
+    $( "#home .circulo" ).hover( function(){
+      $(".circulo3, .circulo6").addClass(' hover-mais');
+  }, function(){
+      $(".circulo3, .circulo6").removeClass(' hover-mais');
+  })
 
 
 /*  abre e fecha o menu quando clicar no icone: hamburguer e x */
@@ -69,7 +86,13 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 3,
+      setWrapperSize: true
+    }
+  }
 })
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */

@@ -9,6 +9,11 @@
      --text-color: hsl(0, 0% ,46%);
      --text-color-light: hsl(0, 0% ,98%);
      --body-color: hsl(0, 0% ,98%);
+
+     --title-2: 2rem;
+     --text: 1.125rem;
+     --title: 1rem;
+     --titleBig: 4rem;
    }
 
 * {
@@ -70,16 +75,16 @@ button, .button{
 }
 
 .title-2{
-    font: 600 2rem "Poppins", sans-serif;
+    font: 600 var(--title-2) "Poppins", sans-serif;
     color: var(--title-color);
 }
 .text{
-    font: 400 1.125rem "Manrope", sans-serif;
+    font: 400 var(--text) "Manrope", sans-serif;
     color: var(--title-color);
 }
 
 .title{
-    font: 700 1rem "Poppins", sans-serif;
+    font: 700 var(--title) "Poppins", sans-serif;
     color: var(--base-color);
 }
 
@@ -102,7 +107,7 @@ main{
 }
 
 #header .caixa-logo{
-    width: 70%;
+    width: 100%;
     display: flex;
 }
 
@@ -130,7 +135,7 @@ main{
     }
     
     nav ul{
-        padding-left: 2rem;
+        padding: 0 3rem;
         height: 15rem;
     }
     
@@ -221,13 +226,14 @@ main{
         color: var(--base-color);
         font-size: 1.5rem;
         cursor: pointer;
+        z-index: 10;
     }
     
     nav .icon-x{
         visibility: hidden;
     
         position: absolute;
-        top: -1.5rem;
+        top: -2.5rem;
         right: 1.5rem;
         z-index: 100;
     
@@ -239,7 +245,6 @@ main{
         opacity: 1;
         top: 1.5rem;
     }
-    
 /*////Home////*/
 
 .hifen{
@@ -262,6 +267,10 @@ main #home{
     margin-bottom: 0.5rem;
 }
 
+#home h1{
+    margin-bottom: 1rem;
+}
+
 #home .avatar{
     height: 23.4375rem;
     width: 100%;
@@ -277,7 +286,12 @@ main #home{
 #home .caixa-avatar{
     position: relative;
 }
-
+@media (min-width: 360px)
+{
+  #home .cirq{
+    display: none;
+   }
+}
 
 #home .caixa-avatar::before{
     content:'';
@@ -321,8 +335,18 @@ main #home{
     border: solid white;
     transition: 0.5s;
 }
-
-#home .avatar .circulo{
+#home .circulo5{
+    height:400px;
+    width: 400px;
+    right: 45%;
+    top: -30%;
+    position: absolute;
+    background: transparent;
+    border-radius: 100%;
+    border: solid white;
+    transition: 0.5s;
+}
+#home .circulo{
     border-radius: 100%;
     height: 11.75rem;
     width: 11.625rem;
@@ -333,6 +357,34 @@ main #home{
     transition: 0.5s;
     z-index: 98;
 }
+#home .circulo6{
+    height:100px;
+    width: 100px;
+    right: 68%;
+    position: absolute;
+    background: transparent;
+    border-radius: 100%;
+    border: solid white;
+    transition: 0.5s;
+}
+#home .circulo7{
+    height:600px;
+    width: 600px;
+    right: -25%;
+    top: 10%;
+    position: absolute;
+    background: transparent;
+    border-radius: 100%;
+    border: solid white;
+    transition: 0.5s;
+}
+
+
+@media (max-width: 365px){
+#home .cirq{
+    display: none;
+}
+}
 
 #home .avatar .circulo:hover{
     height: 13.75rem;
@@ -340,8 +392,11 @@ main #home{
 }
 
 #home .hover{
-    height: 13.75rem;
-    width: 13.625rem;
+    transform: scale(0.60,0.60);
+}
+
+#home .hover-mais{
+    transform: scale(6, 6);
 }
 
 #home .avatar img {
@@ -360,7 +415,7 @@ main #home{
 }
 
 #sobre .title-2{
-    font-size: 4rem;
+    font-size: var(--titleBig);
     text-align: left;
     margin: 1.3rem 0;
     line-height: 4.5rem;
@@ -371,12 +426,17 @@ main #home{
 }
 #sobre .text{
     margin-bottom: 2rem;
-    font: 600 1.25rem "Poppins", sans-serif;
+    font: 600 var(--text) "Poppins", sans-serif;
 }
 
 #sobre .center{
-    display: flex;
     justify-content: space-around;
+    display: inline-block;
+    width: 100%;
+}
+#sobre .center-2{
+    display: flex;
+    justify-content: center;
 }
 
 #sobre img {
@@ -412,6 +472,7 @@ main #home{
     justify-content: center;
     align-items: center;
 }
+#sobre .block{}
 
 /*/////projetos///////*/
 
@@ -435,19 +496,20 @@ main #home{
     margin-bottom: 0;
 }
 
-@media (max-width: 360px)
-{
-  #projetos .swiper-slide .title-2{
-    font-size: 1.8rem;
-   }
-}
+
 #projetos .card{
- height: 34rem;
+ height: 36rem;
  border-radius: 1.3125rem;
- background: #FFFFFF;
- box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.25);
+ background: transparent;
  padding: 2rem;
+ transition: 0.4s;
 }
+
+#projetos .card:hover{
+    box-shadow: 0px 20px 20px 1px rgba(0, 0, 0, 0.25);
+    background: white;
+}
+
 
 #projetos .center{
     position: relative;
@@ -457,12 +519,25 @@ main #home{
 
 #projetos .circulo {
     overflow: hidden;
-    border-radius: 100%;
+    border-radius: 50%;
     width: 11.625rem;
+    height: 11.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
+    padding: 0 2rem 2rem 2rem;
 }
+
+#projetos .margem{
+    margin:  0 2rem 2rem 2rem;
+}
+
+#projetos .card:hover .circulo{
+transform: scale(1.15,1.15);
+}
+
+
 
 #projetos .mage{
     background: rgb(49, 0, 112);
@@ -519,7 +594,7 @@ main #home{
 }
 
 #skills .white{
-    font: 300 1.25rem "Manrope", sans-serif;
+    font: 300 var(--text) "Manrope", sans-serif;
 }
 
 #skills h4, .white{
@@ -539,10 +614,15 @@ main #home{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+#skills #habilidades img:hover {
+    transform: translateY(-8px);
+}
+
 #skills #habilidades img{
     height: 5.5625rem;
     width: 5.5625rem;
     margin: 1rem 0;
+    transition: 0.5s;
 }
 
 
@@ -588,6 +668,11 @@ main #home{
     text-align: left;
 }
 
+#contato h5.title, p.text, .title-2{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
 #contato .aviao{
     height: 7rem;
     width: 7rem;
@@ -597,6 +682,13 @@ main #home{
 
 #contato form .info-box{
     position: relative;
+}
+
+@media (min-width: 360px)
+{
+  #contato div .infos{
+    display: none;
+   }
 }
 
 #contato form input{
@@ -645,10 +737,19 @@ main #home{
     font: 500 1rem "Poppins", sans-serif;
     color: var(--body-color);
     border-radius: 12px;
+    border: #3c06ff;
     height: 4rem;   
     width: 100%;
     outline: none;
     border-style: none;
+    transition: 1s;
+}
+
+#contato form .botao:hover{
+    box-shadow: inset 600px 0 0 0 white;
+    color: var(--title-color);
+    cursor: pointer;
+    border: #3c06ff solid;
 }
 
 [data-fly] {
@@ -656,11 +757,11 @@ main #home{
 }
 
 [data-fly="right"]{
-    transform: translate3d(200px, 50px, 0px);
+    transform: translate3d(400px, 200px, 0px);
 }
 
 [data-fly="left"]{
-    transform: translate3d(-150px, 50px, 0px);
+    transform: translate3d(-300px, 200px, 0px);
 }
 
 .animate{
@@ -675,7 +776,7 @@ main #home{
 }
 
 #footer .container{
-    font: 200 1.1rem "Poppins", sans-serif;
+    font: 200 var(--text) "Poppins", sans-serif;
     color: white;
 }
 
@@ -683,6 +784,7 @@ main #home{
     font-size: 2rem;
     margin: 0 0.5rem;
 }
+
 
 #footer .section{
     padding: 1.5rem 0;
@@ -710,3 +812,368 @@ main #home{
     transform: translate(0);
     z-index: 100;
 }
+
+
+@media (min-width: 1200px){
+
+    :root{
+        --title-2: 4rem;
+        --text: 2rem;
+        --titleBig: 8rem;
+    }
+
+    .container{     
+        max-width: 1334px;
+        margin: 0 auto;
+        padding: 0 82px;
+    }
+
+    nav ul {
+        justify-content: end;
+        margin-right: 10rem;
+    }
+
+    #header{
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 48px 0;
+        width: 100%;
+    }
+
+    #header .container{
+        margin: 0;
+        padding: 0 82px;
+        max-width: none;
+    }
+
+    #header .logo{
+        height: 3rem;
+    }
+
+    #header .icon-menu{
+        color: white;
+        font-size: 4rem;
+    }
+
+    nav div .form{
+        /* clip-path: polygon(0 61%, 100% 100%, 100% 100%, 0% 100%); */
+        clip-path: inset(0 69% 0 0);
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(var(--base-color-alt), var(--base-color-second));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .icon-x{
+        top: .5rem;
+        right: 4.5rem;
+        font-size: 4rem;
+    }
+    
+
+
+
+    #home .title-2{
+        line-height: 1.2;
+    }
+
+
+
+
+
+
+    #sobre .title-2{
+        line-height: 7.5rem;
+    }
+    #sobre p.text{
+        margin-bottom: 8rem;
+    }
+
+    #sobre a{
+        width: 100%;
+        height: 5rem;
+    }
+
+    #sobre .center{
+        display: block;
+    }
+
+    #sobre .center-2{
+        position: relative;
+        justify-content: center;
+        display: flex;
+        top: -13rem;
+        right: -10rem;
+    }
+
+    #sobre .sub-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #sobre img{
+        height: 25rem;
+        width: 25rem;
+    }
+
+    #sobre .title-2{
+        margin-bottom: 6rem;
+    }
+
+    #sobre .container{
+        height: 70rem;
+    }
+
+    #sobre {
+        padding-bottom: 0;
+    }
+
+
+
+
+    #home .caixa-avatar{
+        clip-path: polygon(100% 0, 100% 38%, 87% 100%, 39% 100%, 64% 0);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(var(--base-color-alt), var(--base-color-second));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #home .caixa-avatar::before{
+        content:0;
+        height:100%;
+        width: 100%;
+        z-index: -1;
+        background-image: none;
+        position: absolute;
+        clip-path: polygon(100% 0, 100% 38%, 87% 100%, 39% 100%, 64% 0);
+        top: 2.8%;
+        left: 0;
+    }
+
+    #home .avatar{
+        height: 100%;
+        width: 100%;
+        background: none;
+        position: relative;
+        display: flex;
+        clip-path: polygon(100% 0, 100% 38%, 87% 100%, 39% 100%, 64% 0);
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #home  {
+        margin-bottom: 20rem;
+    }
+
+    #home .cirq{
+        z-index: -1;
+    }
+
+    #home .avatar .circulo{
+        height: 19.75rem;
+        width: 19.625rem;
+        transform: scale(1.1, 1.1);
+        left: 62.5%;
+        top: 28%;
+        position: absolute;
+    }
+    #home .circulo2{
+        height:300px;
+        width: 300px;
+        left: 60%;
+        top: 50%;
+        position: absolute;
+        border-radius: 100%;
+        background: transparent;
+        border: solid white;
+        transition: 0.5s;
+    }
+    #home .circulo3{
+        height:100px;
+        width: 100px;
+        position: absolute;
+        border-radius: 100%;
+        left: 75%;
+        top: 80%;
+        background: transparent;
+        border: solid white;
+        transition: 0.5s;
+    }
+    #home .circulo4{
+        height:500px;
+        width: 500px;
+        right: 35%;
+        top: 70%;
+        position: absolute;
+        background: transparent;
+        border-radius: 100%;
+        border: solid white;
+        transition: 0.5s;
+    }
+    #home .circulo5{
+        height:400px;
+        width: 400px;
+        right: 45%;
+        top: -30%;
+        position: absolute;
+        background: transparent;
+        border-radius: 100%;
+        border: solid white;
+        transition: 0.5s;
+    }
+    #home .circulo6{
+        height:50px;
+        width: 50px;
+        right: 20%;
+        top: 10%;
+        position: absolute;
+        background: transparent;
+        border-radius: 100%;
+        border: solid white;
+        transition: 0.5s;
+    }
+    
+
+    #home .avatar .circulo:hover{
+        height: 21.75rem;
+        width: 21.625rem;
+    }
+
+
+
+    #projetos {
+        padding-top: 0;
+    }
+
+    #projetos .container{
+        margin: auto;
+    }
+    #projetos .title-2{
+        font-size: var(--title-2);
+    }
+
+    #projetos p.title-2{
+        font: 600 2rem "Poppins", sans-serif;
+    }
+
+    #projetos .text{
+        font-size: 1.25rem;
+    }
+
+    .swiper-slide {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+
+
+
+    #skills .espaço{
+        margin: 0;
+    }
+
+    #skills #habilidades {
+        margin-bottom: 10rem;
+        column-gap: 60px;
+    }
+    
+    #skills #java .dividider-2{
+        box-shadow: inset 210px 0 0 0 white;
+    }
+    #skills #html .dividider-2{
+        box-shadow: inset 180px 0 0 0 white;
+    }
+    #skills #javascript .dividider-2{
+        box-shadow: inset 120px 0 0 0 white;
+    }
+    #skills #css .dividider-2{
+        box-shadow: inset 150px 0 0 0 white;
+    }
+    #skills #sql .dividider-2{
+        box-shadow: inset 90px 0 0 0 white;
+    }
+    #skills #php .dividider-2{
+        box-shadow: inset 100px 0 0 0 white;
+    }
+
+    #skills #habilidades .dividider-2{
+        height: 1rem;
+        width: 20%;
+    }
+
+    #skills #habilidades img{
+        height: 10.5625rem;
+        width: 10.5625rem;
+    }
+
+    #skills .foguete{
+        height: 15rem;
+        width: 15rem;
+    }
+
+
+    #video iframe{
+        width: 1280px;
+        height: 720px;
+    }
+
+
+
+    #contato form .botao{
+        margin-bottom: 5rem;
+    }
+
+    #contato form textarea{
+        font-size: 1.5rem;
+    }
+
+    #contato .container{
+        border-radius: 10%;
+        background: white;
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.25);
+        padding-top: 4rem;
+        }
+
+
+    #contato div .infos{
+        display: block;
+    }
+    #contato .infos label{
+        display: block;
+    }
+
+    #contato .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contato .infos label{
+        margin-top: 4rem;
+        font-size: 1.4rem;
+    }
+
+
+    #footer .container{
+        font-size: 1.5rem;
+    }
+
+
+}
+
+

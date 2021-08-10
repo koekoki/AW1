@@ -34,17 +34,17 @@
     <header id="header">
         <nav class="container">
             <a class="caixa-logo" href="#home">
-                <img src="assets/fotos/LogoMinha.png" alt="LogoMinha" class="logo">
+                <img id = "minhaLogo" src="assets/fotos/LogoMinha.png" alt="LogoMinha" class="logo">
             </a>
             <!-- menu -->
             <div class="menu">
                 
                     <ul class="grid">
-                        <li><a class="title-2" href="#home">Início</a></li>
-                        <li><a class="title-2" href="#sobre">Sobre</a></li>
-                        <li><a class="title-2" href="#projetos">Projetos</a></li>
-                        <li><a class="title-2" href="#skills">Skills</a></li>
-                        <li><a class="title-2" href="#contato">Contato</a></li>
+                        <li><a class="title-2" id = "fechar" href="#home">Início</a></li>
+                        <li><a class="title-2" id = "fechar" href="#sobre">Sobre</a></li>
+                        <li><a class="title-2" id = "fechar" href="#projetos">Projetos</a></li>
+                        <li><a class="title-2" id = "fechar" href="#skills">Skills</a></li>
+                        <li><a class="title-2" id = "fechar" href="#contato">Contato</a></li>
                         <hr>
                         <div>
                             <i class="icon-instagram"></i>
@@ -56,7 +56,7 @@
  
                 
 
-                    <div class = "form"></div>
+                    <div id = "quadrado" class = "form"></div>
 
             </div>
             <div class="toggle icon-menu"></div>
@@ -65,16 +65,18 @@
     </header>
     <main>
         <section class="section" id="home">
-            <div class="container grid">
+            <div class="container">
+                
                 <h1 class="title">
                     <div class="hifen"></div> Kaiky Matsumoto
                 </h1>
                 <div class="text">
                     <p class="title-2">
-                        Hello, my <br>
-                        name's Kaiky.<br>
-                        I'm a Full-Stack<br>
-                        Developer.
+                        Olá, meu <br>
+                        nome é Kaiky.<br>
+                        Eu sou um <br>
+                        desenvolvedor <br>
+                        Full-Stack.
                     </p>
                 </div>
 
@@ -86,31 +88,42 @@
                     <div class="circulo">
                         <img src="assets/fotos/20200225_030216.png" alt="Eu">
                     </div>
+                    <div class = "circulo5"></div>
+                    <div class="circulo6"></div>
+                    <div class="circulo7"></div>
                     <div class = "circulo2"></div>
                 </div>
+                <div class = "circulo5 cirq"></div>
+                <div class="circulo6 cirq" ></div>
+                <div class="circulo7 cirq"></div>
+                <div class = "circulo2 cirq"></div>
+                <div class = "circulo4 cirq"></div>
+                    <div class = "circulo3 cirq"></div>
             </div>
+        
         </section>
     </main>
     <section id="sobre" class="section">
-        <div class="container grid">
+        <div class="container">
             <h2 class="title">
                 <div class=hifen></div> Sobre mim =&#41
             </h2>
             <p class="text">
-                Eu amo desfrutar minha lógica, criando aplicações para melhorar a humanidade.
+                Eu amo desfrutar minha lógica, <br> criando aplicações para melhorar a humanidade.
             </p>
-            <HR>
-            </HR>
             <h2 class="title-2">
-                Penso.<br>
+                Penso.
                 Faço.<br>
-                Resolvo. <br>
+                Resolvo. 
             </h2>
-            <div class="center"> <a class = "text" href="assets/CV_KaikyMatsumoto.pdf" target="blanck"> <i class="icon-download"></i> Baixar CV</i></a></div>
-            <div class="center"> <a class = "text" href = "https://www.linkedin.com/in/kaiky-matsumoto/" target="blanck"> <i class="icon-linkedin"></i> Linkedin</a></div>
+            <div class = "sub-container">
+                <div class="center "> <a class = "text" href="assets/CV_KaikyMatsumoto.pdf" target="blanck"> <i class="icon-download"></i> Baixar CV</i></a> <br>
+                    <a class = "text block" href = "https://www.linkedin.com/in/kaiky-matsumoto/" target="blanck"> <i class="icon-linkedin"></i> Linkedin</a></div>
+                <div class="center-2">
+                    <img src="assets/fotos/olhos-direita.png" alt="olhos-direita">
+                </div>
+    
 
-            <div class="center">
-                <img src="assets/fotos/olhos-direita.png" alt="olhos-direita">
             </div>
         </div>
     </section>
@@ -149,10 +162,11 @@
 
                 <div class = "card grid">
                   <div class="center">
-                      <div class="circulo mage">
-                          <img src="assets/fotos/chapeu-de-mago.png" alt="mage">
-                      </div>
-                  </div>
+                    
+                        <div class="circulo mage">
+                            <img src="assets/fotos/chapeu-de-mago.png" alt="mage">
+                        </div>
+                    </div>
                   <p class="title-2">Game - Mage</p>
                   <p class=text>
                       Projeto pessoal - <br>
@@ -213,7 +227,7 @@
         <div class="section">
             <div class="container">
                 <h4 class="title-2">Skills.</h3>
-                    <p class="white">Algumas das minhas habilidades</p>
+                    <p class="white">Algumas dos meus conhecimentos  <br> na área da programação.</p>
 
                     <div class="espaço" data-fly="right">
                         <img class="foguete"  src="assets/fotos/foguetes.png" alt="foguetes">
@@ -246,13 +260,13 @@
     <section id="video" class="section">
         <div class="container">
 
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/NU7ZjONE6jg"
-                title="YouTube video player" frameborder="0"></iframe>
+            <iframe width="300" height="350" src="https://www.youtube.com/embed/LMD6MqwErzc" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
     </section>
     <section class="section" id="contato">
-        <div class="container grid">
+        <div class="container">
             <h5 class="title">
                 <div class=hifen></div> Diga olá 👋
             </h5>
@@ -262,33 +276,43 @@
                 sempre a disposição para responder.
                 =&#41</p>
             <img class="aviao" data-fly = "left" src="assets/fotos/aviao-de-papel.png" alt="aviao">
-            <form>
-                <div class="info-box">
-                    <input class="text" type="text" name="nome" required="">
-                    <label class="text"><i class="icon-user"></i> Seu nome:</label>
+                <div class = "grid">
+                    <div class = "infos">
+                        <label  class = "text" for="telefone">  <i class = "icon-phone"></i>(11)94275-7764</label>
+                        <label class = "text" > <i class="icon-envelope"></i> kaiky.matsumoto@gmail.com</label>
+                        <label class = "text" > <i class = "icon-home"></i> Jardim Tremembé, São Paulo (SP)</label>
+                    </div>
+                    <form>
+                        <div class="info-box">
+                            <input class="text" type="text" name="nome" required="">
+                            <label class="text"><i class="icon-user"></i> Seu nome:</label>
+                        </div>
+                        <div class="info-box">
+                            <input class="text" type="text" name="email" required="">
+                            <label class="text"> <i class="icon-paperplane"></i> Email:</label>
+                        </div>
+                        <div class="info-box">
+                            <input class="text" type="tel" name="telefone" required="">
+                            <label class="text">Telefone:</label>
+                        </div>
+                        <div class="info-box">
+                            <input class="text" type="text" name="assunto" required="">
+                            <label class="text">Assunto:</label>
+                        </div>
+                        <textarea class="text" name="texto" id="" placeholder="Mensagem: "></textarea>
+                        <input type="submit" value="Enviar" class="botao">
+                        
+                    </form>
                 </div>
-                <div class="info-box">
-                    <input class="text" type="text" name="email" required="">
-                    <label class="text"> <i class="icon-envelope"></i> Email:</label>
-                </div>
-                <div class="info-box">
-                    <input class="text" type="tel" name="telefone" required="">
-                    <label class="text">Telefone:</label>
-                </div>
-                <div class="info-box">
-                    <input class="text" type="text" name="assunto" required="">
-                    <label class="text">Assunto:</label>
-                </div>
-                <textarea class="text" name="texto" id="" placeholder="Mensagem: "></textarea>
-                <input type="submit" value="Enviar" class="botao">
-            </form>
         </div>
+        
     </section>
     <footer>
         <section id="footer">
             <div class="container grid section">
+                         
                 <label>(11)94275-7764</label>
-                <label>kaiky.matsumoto@gmail.com</label>
+                <label > kaiky.matsumoto@gmail.com</label>
                 <label for="copy">©2021 KAIKY MATSUMOTO</label>
                 <hr>      
             <div>
