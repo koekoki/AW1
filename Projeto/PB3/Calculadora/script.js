@@ -15,20 +15,21 @@ function insert(num){
         conta = 0
     }
     var lastResult = initial.slice(-1); 
-
     if (initial.length < 20){
-
+    if ((num == '*' || num == '/') &&  initial == 0){
+        $("#result").html("0"); 
+    }
+    else
     if (lastResult != '-' && lastResult != '+' && lastResult != '/' && lastResult != '*')
     $("#result").append(num);
     else 
     if (num != '-' && num != '/' && num != '*' && num != '+')
     $("#result").append(num);
-    }
 
+}
 }
 
 function clean(){
-
     $("#result").html("0");
 }
 
@@ -46,24 +47,11 @@ function sound2(){
     });
 }
 
-
-function resetar(value){
-    alert(value)
-    if (value  == "stop" )
-        {   
-            clean()
-            insert()
-        }
-    else
-        insert()
-}
-
 function calculate(){
 
     var result = $("#result").html();
 
     if(result){
-        var resultFormat = parseFloat(result.replace(',', '.'))
 
         conta = eval(result);
 
@@ -71,4 +59,3 @@ function calculate(){
         
     }
 }
-
