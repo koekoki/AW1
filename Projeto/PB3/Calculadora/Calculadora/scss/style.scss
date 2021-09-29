@@ -1,0 +1,210 @@
+:root{
+    --hue: 220;
+    --base-color: hsl(var(--hue), 36%, 57%);
+    --title-color: hsl(var(--hue), 41%, 10%);
+    --body-color: hsl(0, 0%, 98%);
+  }
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+} 
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+#header{
+   padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+   display: flex;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: var(--body-color);
+   width: 100%;
+   box-shadow: 0 0.1rem 2rem rgba(50, 50, 50, 0.77);
+}
+#header .container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 1.5rem;
+   margin-right: 1.5rem;
+}
+
+body{
+    font: 400 1rem "Poppins", sans-serif;
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+a{
+    text-decoration:none;
+    cursor: pointer;
+}
+
+
+.logo{
+    color: var(--title-color);
+    font: 700 1.31rem "Poppins", sans-serif;
+}
+
+.logo span{
+    color: var(--base-color);
+}
+
+/*-------------- Main --------------*/
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(255,255,255);
+    background: linear-gradient(119deg, rgba(255,255,255,1) 45%, rgba(179,176,176,1) 100%);
+}
+
+#main .container{
+    background-color: white;
+    width: 35em;
+    height: 35em;
+    box-shadow: 10px 10px 20px 1px grey;
+    border-radius: 2em;  
+    background: linear-gradient(119deg, rgba(255,255,255,1) 45%, rgb(206, 204, 204) 100%);
+}
+
+#main .view{   
+    margin: 2em 1em 0rem 1em;
+    height: 5em;
+    width: 80%;
+    background-color: transparent;
+    align-items: center;
+    box-shadow: inset 10px 10px 20px 1px grey;
+    border-radius: 2em;
+    text-align: right;
+}
+
+#main p{
+    font: 600 2.50rem 'Open Sans', sans-serif;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: rgb(41, 40, 40);
+    text-shadow: 2px 2px 4px #000;
+}
+
+#main .sub-container{
+    margin-top: 3rem;
+    position: relative;
+}
+
+%test {
+    position: absolute;
+    content: '';
+    transition: all .5s;
+  }
+
+#main  button { 
+	display: inline-block; 
+	position: absolute;
+    height: 3rem;
+    width: 3rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	vertical-align: middle;
+	font-family: 'Rubik One', sans-serif;
+	text-decoration: none;
+	font-size: 1.5rem;
+    border: none;
+	transition: margin 0.3s;
+    
+    background-color: white;
+
+
+	&::before {
+    @extend %test;
+		bottom: -15px;
+		height: 15px;
+		width: 100%;
+		left: 8px;
+		transform: skewX(45deg);
+        transition: all 0.3s;
+		background-color: darken(white, 20%);
+	}
+
+	&::after {
+		@extend %test;
+		right: -15px;
+		height: 100%;
+		width: 15px;
+		bottom: -8px;
+		transform: skewY(45deg);
+        transition: all 0.3s;
+		background-color: darken(white, 30%);
+	}
+
+	&:active {
+		margin-left: 15px;
+		margin-top: 15px;
+		&::before {
+			bottom: -1px;
+			height: 1px;
+			left: 1px;
+		}
+		
+    &::after {
+			right: -1px;
+			width: 1px;
+			bottom: -1px;
+		}	
+	}
+}
+
+$delete: rgb(201, 72, 72);
+$equal: rgb(75, 156, 75);
+
+#main .delete{
+    background-color: $delete;
+    &::before {
+            background-color: darken($delete, 15%);
+        }
+    
+        &::after {
+            background-color: darken($delete, 25%);
+        }
+}
+
+#main .equal{
+    background-color: $equal;
+    &::before {
+        background-color: darken($equal, 15%);
+    }
+
+    &::after {
+        background-color: darken($equal, 25%);
+    }
+}
+
+#main .keys-margin{
+    margin-top: 3rem;
+}
+
+#main .first{
+    left: 130px;
+}
+
+#main .second{
+    left: 220px;
+}
+
+#main .third{
+    left: 310px;
+}
+
+#main .fourth{
+    left: 400px;
+}

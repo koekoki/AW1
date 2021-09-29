@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="container">
+          <a class="logo">Kaiky<span>Matsumoto</span>.</a>
+        </nav>
+    </header>
+    <main id="main">
+        <div class = container>
+            <div class = "center">
+            <div id = "view" class = "view"> 
+                <p id = "result" maxlength = 20 SIZE=10 for=""> 0</p>
+            </div>
+            </div>
+            <div id = "keys" class = "sub-container center">
+                <div class = "keys-margin">
+                    <button id = "7" onClick = "insert('7'), sound1()" class = "first">7</button>
+                
+                    <button id = "8" onClick = "insert('8'), sound2()" class = "second">8</button>
+
+                    <button id = "9" onClick = "insert('9'), sound1()" class = "third">9</button>
+
+                    <button id = "/" onClick = "insert('/'), sound2()" class = "fourth">/</button>
+                </div>
+
+            </div>
+            <div id = "keys" class = "sub-container center">
+                <div class = "keys-margin">
+                    <button id = "buttons" onClick = "insert('4'), sound2()" class = "first">4</button>
+
+                    <button id = "buttons" onClick = "insert('5'), sound1()" class = "second">5</button>
+
+                    <button id = "buttons" onClick = "insert('6'), sound2()" class = "third">6</button>
+
+                    <button id = "buttons" onClick = "insert('*'), sound1()" class = "fourth">*</button>
+                </div>
+            </div>
+            <div id = "keys" class = "sub-container center">
+                <div class = "keys-margin">
+                    <button id = "buttons" onClick="insert('1'), sound1()" class = "first">1</button>
+
+                    <button id = "buttons" onClick="insert('2'), sound2()" class = "second">2</button>
+
+                    <button id = "buttons" onClick="insert('3'), sound1()" class = "third">3</button>
+
+                    <button id = "buttons" onClick="insert('-'), sound2()" class = "fourth">-</button>
+                </div>
+            </div>
+            <div id = "keys" class = "sub-container center">
+                <div class = "keys-margin">
+                    <button id = "buttons" onClick="clean(), sound2()" class = "first delete">C</button>
+
+                    <button id = "buttons" onClick="insert('0'), sound1()" class = "second">0</button>
+
+                    <button id = "calculate" onClick="calculate(), sound2()" class = "third equal">=</button>
+
+                    <button id = "buttons" onClick="insert('+'), sound1()" class = "fourth">+</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+
+<script src="script.js"></script>
+</html>
