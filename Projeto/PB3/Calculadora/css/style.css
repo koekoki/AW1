@@ -204,3 +204,25 @@ a {
 #main .fourth {
   left: 400px;
 }
+
+
+@media (max-width: 360px){
+
+  #main button{
+    height: 2rem;
+    width: 2rem;
+    top: -10px;
+    transform: translate(-250%, 100%);
+    font-size: 1.2rem;
+  }
+  
+
+  #main .sub-container {
+    margin-top: 1.5rem;
+  }
+
+  #main .container {
+    width: 25em;
+    height: 30em;
+  }
+}
