@@ -64,7 +64,6 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: white;
   background: linear-gradient(119deg, white 45%, #b3b0b0 100%);
 }
 
@@ -212,7 +211,7 @@ a {
     height: 2rem;
     width: 2rem;
     top: -10px;
-    transform: translate(-250%, 100%);
+    transform: translate(-290%, 100%);
     font-size: 1.2rem;
   }
   
@@ -225,4 +224,8 @@ a {
     width: 25em;
     height: 30em;
   }
+#main{
+	background: white;
+}
+
 }
